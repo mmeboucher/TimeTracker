@@ -1,5 +1,5 @@
 body { padding:50px; }
-.panel-primary, .panel-default { width:30%; float:left; margin-right:2%; min-height:180px;}
+.panel-primary, .panel-default { width:50%; float:left; margin-right:2%; min-height:180px;}
 .cl { clear:both; }
 input[type=text], textarea {
 	padding: 3px;

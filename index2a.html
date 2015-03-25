@@ -39,13 +39,15 @@
   </span>
 <br><br>
 
-    <ul>
-      <li ng-repeat="name in categories">{{name.goal}} 
-      <a href="" ng-click="removeName(name)">remove</a></li>
+    <ul style="font-size: 18px;">
+      <li ng-repeat="name in categories">{{name.goal}} -- number of hours: {{name.hours}}
+      <a href="" ng-click="removeName(name)" style="margin-left: 20px; ">remove</a></li>
     </ul>
 
     <form name= "myform" name="entry_goal" ng-submit="addEntry(adding_entry)" novalidate>
-      <input type="text" required ng-model="adding_entry.goal">
+
+      <input type="text" placeholder="Goal" required ng-model="adding_entry.goal">
+      <input type="text" placeholder="hours" required ng-model="adding_entry.hours">
 
 <!--
       the span for required error is not working
@@ -78,9 +80,9 @@
 <div class="show-colors"  ng-init="mySwitch=true" ng-show="true">
 
   -->
-
+<div class= "cl">
 <div class="color-images" ng-repeat="item in items" ng-show="true" ng-style="computeCSS(item)">
-
+</div>
 <!--
       <img style="width:300px; height: 300px;" class="ng-cloak" ng-src="{{ color.imageurl }}" alt="no color">
 -->
@@ -98,9 +100,9 @@
 
       nameApp.controller('MainCtrl', function ($scope){
         $scope.categories = [
-        {goal: 'Family Time'}, 
-        {goal:'Daily Chores'},
-        {goal: 'Learn New Skills'}
+        {goal: 'Family Time', hours: 0}, 
+        {goal:'Daily Chores', hours: 0},
+        {goal: 'Learn New Skills', hours: 0}
       ];
 
    $scope.colors = [
@@ -190,11 +192,16 @@ for (var i = 0; i < $scope.categories.length; i++){
 */
 
       $scope.computeCSS = function(item) {
+        var newWidth = '200px';
+
         return { 
-          width: item.width+"px", 
-          left: item.left+"px", 
-          top: item.top+"px", 
-          height: item.height+"px", 
+ //         width: item.width+"px", 
+          width: newWidth,
+          float: 'left',
+          height: '200px',
+  //        left: item.left+"px", 
+//          top: item.top+"px", 
+//          height: item.height+"px", 
           'background-color':item.color
         };
       }
