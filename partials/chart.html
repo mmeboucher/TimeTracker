@@ -1,0 +1,141 @@
+
+
+<!--
+<div class="mychart" style="width:{{width}}px; height:{{height}}px;">
+
+-->
+
+<div class="clippedImg1"></div>
+<div class="clippedImg2"></div>
+<div class="container1">
+
+<section class="color-11 mytitle">
+
+		<nav class="cl-effect-16" id="cl-effect-16">
+
+
+			<a href="#/" data-hover="Home">Home</a>
+			<a href="#/show" data-hover="Activities">Activities</a>
+			<a href="#/junk" data-hover="404 Page">404 Page</a>
+		
+				</nav>
+</section>
+
+
+
+<br><br><br><br>
+
+<div class="mychart"
+style="
+border-left: 1px solid #666;
+	border-bottom: 1px solid #666;
+	margin: 0 auto;
+	position: relative;
+	width: 600px;
+	height: 250px;">
+
+
+	<div class="y"
+
+style="transform: rotate(-90deg);
+		transform-origin: bottom left;
+		-webkit-transform: rotate(-90deg);
+		-webkit-transform-origin: bottom left;
+		width: 150px;
+		height: 100px;
+		position: absolute;   
+		padding: 5px	
+		bottom: 0;"
+	>
+
+	{{yAxis}}
+	</div>
+
+
+	<div class="x"
+style="
+		position: absolute;
+		width: 100%;
+		padding: 5px;
+		top: 120%   ;"
+
+	>
+
+	{{xAxis}}
+	</div>
+
+
+	<div class="bar" ng-repeat="name in categories"
+	style = "background-color: #9351a6;
+		position: absolute;
+		bottom: 0;"
+
+
+
+
+	ng-style="findColor()">
+
+
+		
+
+	<p class="mylabels"
+style="position: absolute;
+			font-size: 10px;
+			color: #3e6c7c;
+			bottom: -40px;"
+
+		>{{name.goal}}</p>
+
+	</div>
+
+</div>
+
+</div><!--end of container1-->
+<!--
+this is the code that works
+
+		transform-origin: bottom left;
+
+			-webkit-transform-origin: bottom left;
+
+
+<p class="mylabels"
+
+		>{{name.goal}}</p>
+
+<div class="bar" ng-repeat="name in categories"
+
+
+  height =  ($scope.categories{{$index}}["hours"] * 40)px;
+
+	
+	style="
+	height:{{ name.hours / max * height }}px;
+	width: {{ width / $scope.categories.length - 5 }}px;
+	left: {{ $index / $scope.categories.length * width }}px;
+	">
+		<p class="label">{{name.goal}}</p>
+	</div>
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

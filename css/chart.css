@@ -1,0 +1,56 @@
+/********** chart ************/
+
+.mychart {
+	border-left: 1px solid #666;
+	border-bottom: 1px solid #666;
+	margin: 0 auto;
+	position: relative;
+	width: 600px;
+	height: 250px;
+
+	.y {
+		transform: rotate(-90deg);
+		transform-origin: bottom left;
+		-webkit-transform: rotate(-90deg);
+		-webkit-transform-origin: bottom left;
+		width: 100px;
+		height: 100px;
+		position: absolute;   
+		padding: 5px;
+		bottom: 0;
+
+		}
+
+	.x {
+		position: absolute;
+		width: 100%;
+		padding: 5px;
+		top: 120%   ;  /*always at bottom of page */
+	}
+
+	.bar {
+		background-color: #9351a6;
+		position: absolute;
+		bottom: 0;
+
+	}
+
+
+/*
+		.bar:nth-of-type(even) {
+			background: #be4c39;
+	}
+*/
+
+	.mylabels {
+		position: absolute;
+			font-size: 8px;
+			bottom: -30px;
+		/*	position: relative;*/
+
+	}
+}
+
+
+
+

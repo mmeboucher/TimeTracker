@@ -1,0 +1,239 @@
+
+
+<!-- original show.html 
+<div>
+    <p>{{message}}</p>
+    <p><a href="#/">/Go to Home Page</a></p>
+</div>
+-->
+   
+<div class="clippedImg"></div>
+
+
+<div class="container1">
+
+
+<section class="color-11 mytitle">
+
+<!--
+		<nav class="cl-effect-16" id="cl-effect-16">
+		<a href="#cl-effect-16" data-hover="Languor">Languor</a>
+			 <div class="mytitle"><a href="#/">Home</a>&nbsp&nbsp&nbsp&nbsp
+    <a href="#/junk">/404 page</a></div>
+
+
+-->
+
+		<nav class="cl-effect-16" id="cl-effect-16">
+
+
+			<a href="#/" data-hover="Home">Home</a>
+			<a href="#/chart" data-hover="View Chart">View Chart</a>
+			<a href="#/junk" data-hover="404 Page">404 Page</a>
+		
+				</nav>
+</section>
+
+
+
+
+
+<div class="cl">
+	
+  <h3 class="mytitle">Enter Your Activities and Hours</h3>
+  <div class="panel panel-default">
+    <div id="alertBox" style="height: 35px; font-size: 15px; line-height: 70%;" class="alert alert-danger"
+      ng-show="add_portfolio_error != '' ">
+      {{ add_portfolio_error }}
+    </div>
+
+  <div  style="float:left;">
+        <input 
+        class="displayDate"
+        type="date" 
+        placeholder="yyyy/mm/dd" 
+        size="10" 
+        required
+        ng-model="control.date" 
+        ng-change="checkDate()"/>
+  <span class="errormsg" ng-show="control.date.$error.required">
+                   Date Required
+  </span>
+    </div>
+
+  <br><br><br>
+  
+
+<form  name= "mytestform" novalidate>
+
+    <ul ng-repeat="name in categories" style="font-size: 16px; margin-bottom: -10px;line-height: 80%;">
+      <li > {{name.goal}} -- hours: {{name.hours}} 
+
+      <a href="" ng-click="updateEntry(name,entered_time)" style="margin-left: 20px; ">update hours:
+
+        <!-- works but hours does not get zeroed out when input field entered, this does not work
+        <input type="text" size="5" ng-model = "entered_time" name="entered_time" ng-change="clearMsg()"/>
+
+          -->
+    </a>
+
+          <input type="text" size="3" maxlength="3" ng-model = "entered_time" name="entered_time" ng-change="clearMsg()"/>
+
+<!--
+
+      <a href="" ng-click="removeName(name)" style="margin-left: 20px; ">delete this goal</a>
+-->
+
+<button ng-click='removeName(name)'style="margin-left: 20px; font-size:.8em;" >Delete activity</button>
+
+
+
+    </li>
+    </ul>
+    <br>
+  </form>
+
+
+<form class="inputForm" name= "myform" name="entry_goal" ng-submit="addEntry(adding_entry)" novalidate>
+
+<section class="content bgcolor-6">
+
+<span class="input" id="span1">
+
+      <input class="input_field" type="text" maxlength="15" id="input-28"  name="ent_goal" required ng-model="adding_entry.goal">
+
+
+          <label class="input_label" for="input-28">
+            <span class="input_label_content">Activity</span>
+          </label>
+</span>
+
+ <span class="input" id= "span2">
+
+      <input class="input_field" type="text"  maxlength="3" size="4" id="input-29" name="ent_hours" required ng-model="adding_entry.hours">
+
+          <label class="input_label" for="input-29">
+            <span class="input_label_content">Hours</span>
+          </label>
+
+      <button type="submit" id = "addButton"  style="float:right;">Add</button>
+
+
+  
+   
+
+ <!-- 
+   <button type="submit" class="btn btn-default" style="float:right;">Add</button>
+
+        <input type="button" value="Add">
+         <input type='submit' value="add" style="float:right;">
+
+
+
+    -->
+
+</span>
+
+    <span class="errormsg" ng-show="myform.entry_goal.$error.required">
+                   Entry Required
+    </span>
+       <!--
+         
+      -->
+</section>
+
+</form>
+
+  </div><!-- end of panel-->
+
+  <!--
+
+<div class="show-colors"  ng-init="mySwitch=true" ng-show="true">
+<div class= "cl" style="height: 300px;">
+
+    -->
+<br>
+
+<div class = "cl mytitle" id="show1">
+<button ng-click='resetAll3()'>Show Legend</button>
+<button ng-click='resetAll()'>Reset & Show Visuals1</button>
+<button ng-click='resetAll2()'>Reset & Show Visuals2</button>
+
+</div>
+
+<div class="cl">
+
+<div class="color-images" ng-if='showElement3' ng-repeat="name in categories" ng-show="true" ng-style="computeCSS(item)">
+
+<p id = "showLegend">{{name.goal}} </p>
+</div><!-- end of showLegend-->
+
+</div>
+
+<div class="cl">
+  <br><br>
+</div>
+
+
+
+<br><br>
+
+<div class="color-images" id='showVisual1' ng-if='showElement' ng-repeat="name in categories" ng-style="computeCSS(item)">
+</div><!-- end of showVisual1-->
+
+<br>
+<br><br>
+
+<div class="color-images" id='showVisual2' ng-if='showElement2' ng-repeat="name in categories" ng-style="computeCSS(item)">
+
+</div><!-- end of showVisual2-->
+
+
+</div><!-- end of main cl-->
+</div><!-- end of container1-->
+
+
+
+
+<script>
+
+$( "#input-28" ).blur(function() {
+
+var inputValue = $("#input-28").val();
+  console.log("inputValue = " + typeof(inputValue));
+    console.log("inputValue = " + inputValue);
+
+
+if (inputValue === "" || inputValue === undefined) {
+      console.log("inputValue again  = " + inputValue);
+    $("#span1").removeClass("input--filled");
+   } else  {
+    $("#span1").addClass("input--filled");
+   }
+});
+
+$( "#input-29" ).blur(function() {
+
+var inputValue29 = $("#input-29").val();
+  console.log("inputValue29 = " + typeof(inputValue29));
+    console.log("inputValue29 = " + inputValue29);
+
+
+if (inputValue29 === "" || inputValue29 === undefined) {
+      console.log("inputValue29 again  = " + inputValue29);
+    $("#span2").removeClass("input--filled");
+   } else  {
+    $("#span2").addClass("input--filled");
+   }
+});
+
+
+/*
+
+*/
+
+
+</script>
+
+
+

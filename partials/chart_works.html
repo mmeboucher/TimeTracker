@@ -1,0 +1,109 @@
+
+
+<!--
+<div class="mychart" style="width:{{width}}px; height:{{height}}px;">
+
+-->
+
+<div class="mychart"
+style="
+border-left: 1px solid #666;
+	border-bottom: 1px solid #666;
+	margin: 0 auto;
+	position: relative;
+	width: 600px;
+	height: 250px;">
+
+
+	<div class="y"
+
+style="transform: rotate(-90deg);
+		transform-origin: bottom left;
+		-webkit-transform: rotate(-90deg);
+		-webkit-transform-origin: bottom left;
+		width: 100px;
+		height: 100px;
+		position: absolute;   
+		padding: 5px	
+		bottom: 0;"
+	>
+
+	{{yAxis}}
+	</div>
+
+
+	<div class="x"
+style="
+		position: absolute;
+		width: 100%;
+		padding: 5px;
+		top: 120%   ;"
+
+	>
+
+	{{xAxis}}
+	</div>
+
+
+	<div class="bar" ng-repeat="name in categories"
+	style = "background-color: #9351a6;
+		position: absolute;
+		bottom: 0;"
+
+
+
+
+	ng-style="findColor()">
+
+
+		<p class="mylabels"
+style="position: absolute;
+			font-size: 8px;
+			bottom: -30px;"
+
+		>{{name.goal}}</p>
+	</div>
+
+
+
+
+</div>
+
+
+<!--
+<div class="bar" ng-repeat="name in categories"
+
+
+  height =  ($scope.categories{{$index}}["hours"] * 40)px;
+
+	
+	style="
+	height:{{ name.hours / max * height }}px;
+	width: {{ width / $scope.categories.length - 5 }}px;
+	left: {{ $index / $scope.categories.length * width }}px;
+	">
+		<p class="label">{{name.goal}}</p>
+	</div>
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
