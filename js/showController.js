@@ -8,12 +8,11 @@ timeTrackerControllers.controller('ShowController', ['$scope',
     	$scope.pageClass = "page-main";
         $scope.message = "You are on Main Page";
 
-    console.log("in showCtrl rootscope test msg = " + $rootScope.msg);
 
         $rootScope.msg = "rootScope msg now changed";
         $rootScope.$apply(); 
 
-        console.log("rootscope changed msg = " + $rootScope.msg);
+  //      console.log("rootscope changed msg = " + $rootScope.msg);
 
 
 //nameApp.controller('MainCtrl', function ($scope){
