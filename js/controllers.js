@@ -19,7 +19,7 @@ timeTrackerControllers.controller('ShowController', ['$scope',
 timeTrackerControllers.controller('FourCtrl', ['$scope',
     function FourCtrl($scope) {
     	$scope.pageClass = "page-404";
-        $scope.message = "Oh no - you stumbled upon a 404 !";
+        $scope.message = "You ran into a 404 !";
     }]);
 
 

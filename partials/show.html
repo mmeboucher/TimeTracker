@@ -16,23 +16,19 @@
 <section class="color-11 mytitle">
 
 <!--
-		<nav class="cl-effect-16" id="cl-effect-16">
-		<a href="#cl-effect-16" data-hover="Languor">Languor</a>
-			 <div class="mytitle"><a href="#/">Home</a>&nbsp&nbsp&nbsp&nbsp
-    <a href="#/junk">/404 page</a></div>
-
+	
 
 -->
 
 		<nav class="cl-effect-16" id="cl-effect-16">
 
+        <a href="#/" data-hover="Home">Home</a>
+        <a href="#/chart" data-hover="Chart">Chart</a>
+        <a href="#/view" data-hover="View">View</a>
+        <a href="#/junk" data-hover="404 Page">404 Page</a>
 
-			<a href="#/" data-hover="Home">Home</a>
-			<a href="#/chart" data-hover="View Chart">View Chart</a>
-			<a href="#/junk" data-hover="404 Page">404 Page</a>
-		
-				</nav>
-</section>
+		</nav>
+  </section>
 
 
 
@@ -40,7 +36,7 @@
 
 <div class="cl">
 	
-  <h3 class="mytitle">Enter Your Activities and Hours</h3>
+  <h3 class="mytitle">Add/Update Your Activities and Hours</h3>
   <div class="panel panel-default">
     <div id="alertBox" style="height: 35px; font-size: 15px; line-height: 70%;" class="alert alert-danger"
       ng-show="add_portfolio_error != '' ">
@@ -61,15 +57,25 @@
   </span>
     </div>
 
-  <br><br><br>
+  <br><br>
   
 
 <form  name= "mytestform" novalidate>
+  
 
-    <ul ng-repeat="name in categories" style="font-size: 16px; margin-bottom: -10px;line-height: 80%;">
-      <li > {{name.goal}} -- hours: {{name.hours}} 
+    <ul ng-repeat="name in categories" style="font-size: 16px; margin-bottom: -10px;">
 
-      <a href="" ng-click="updateEntry(name,entered_time)" style="margin-left: 20px; ">update hours:
+    <!--
+      <li ><br> {{name.goal}} -- hours: {{name.hours}} 
+
+-->
+
+      <li ><br> {{name.goal}} -- hours: &nbsp
+
+        <input type="text" size="3" maxlength="3" placeholder="{{name.hours}}" ng-model = "entered_time" name="entered_time" ng-change="clearMsg()"/>
+
+
+      <a href="" ng-click="updateEntry(name,entered_time,entered_comments, entered_rating)" style="margin-left: 20px; ">update: 
 
         <!-- works but hours does not get zeroed out when input field entered, this does not work
         <input type="text" size="5" ng-model = "entered_time" name="entered_time" ng-change="clearMsg()"/>
@@ -77,14 +83,37 @@
           -->
     </a>
 
-          <input type="text" size="3" maxlength="3" ng-model = "entered_time" name="entered_time" ng-change="clearMsg()"/>
-
+          
 <!--
 
-      <a href="" ng-click="removeName(name)" style="margin-left: 20px; ">delete this goal</a>
+   
+
 -->
 
 <button ng-click='removeName(name)'style="margin-left: 20px; font-size:.8em;" >Delete activity</button>
+
+<br>
+
+
+<!-- comment in to show value of rating while testing
+<p>You rate this as: &nbsp{{name.rating}}</p>
+
+-->
+
+    <input id="field6" type="radio"  ng-model="name.rating" ng-value="ratingValue1" >&nbspneutral<br>
+
+
+    <input id="field6a" type="radio"  ng-model="name.rating" ng-value="ratingValue2">&nbspenjoy it a lot<br>
+
+  <input id="field6b" type="radio"  ng-model="name.rating" ng-value="ratingValue3">&nbsphate it<br>
+
+
+<br>
+ <textarea placeholder="{{name.comments}}" rows="3" cols="40" maxlength="160" ng-model = "name.comments" name="entered_comments" ng-change="clearMsg()"/>
+</textarea>
+
+<br>
+<hr style="width: 100%; margin-left: -10px;">
 
 
 
@@ -92,6 +121,13 @@
     </ul>
     <br>
   </form>
+
+
+<!--
+
+
+
+-->
 
 
 <form class="inputForm" name= "myform" name="entry_goal" ng-submit="addEntry(adding_entry)" novalidate>

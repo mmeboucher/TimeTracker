@@ -19,7 +19,11 @@ timeTrackerControllers.controller('ShowController', ['$scope',
 
   $scope.categories = $rootScope.categories;
 
+$scope.ratingValue1 = "neutral";
+$scope.ratingValue2 = "enjoy it a lot";
+$scope.ratingValue3 = "hate it";
 
+      
 /*
   $scope.categories = [
   {goal: 'Family Time', hours: 5}, 
@@ -469,7 +473,7 @@ $scope.removeName = function(name) {
 
 /************************************************/
 
-$scope.updateEntry = function(name, time) {
+$scope.updateEntry = function(name, time, comments, rating) {
 
  // $("#alertBox").removeClass("alert-success");
 
@@ -499,6 +503,9 @@ if (time < .1 || time > 24) {
         var tempx = $scope.categories[y]["goal"];
         var inputHoursx = time;
         $scope.categories[y]["hours"] = time;
+        if (!comments == "undefined")
+          $scope.categories[y]["comments"] = comments;
+
         $("#alertBox").addClass("alert-success");
 
         $scope.add_portfolio_error = "Activity successfully updated !";

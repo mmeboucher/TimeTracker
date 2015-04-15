@@ -314,7 +314,7 @@ if ($scope.cnt >= ($scope.categories.length)) {
 do {
 //  height:{{ $scope.graphData[$scope.$index]["hours"] * 40 }}px;
 //  var height =  $scope.categories[$scope.cnt].hours * 40;
-  var height =  $scope.categories[$scope.cnt]["hours"] * 40;
+  var height =  $scope.categories[$scope.cnt]["hours"] * 30;
 
   var width = ( $scope.width / $scope.categories.length - 5 );
   console.log("width = " + width + "at " + $scope.cnt + "length = " + $scope.categories.length);

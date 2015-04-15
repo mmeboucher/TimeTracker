@@ -1,0 +1,86 @@
+
+
+<!-- original show.html 
+<div>
+    <p>{{message}}</p>
+    <p><a href="#/">/Go to Home Page</a></p>
+</div>
+-->
+   
+   
+<div class="clippedImg3"></div>
+
+
+<div class="container1">
+
+
+<section class="color-11 mytitle">
+
+<!--
+	
+-->
+
+		<nav class="cl-effect-16" id="cl-effect-16">
+
+
+			<a href="#/" data-hover="Home">Home</a>
+      <a href="#/show" data-hover="Edit">Edit</a>
+      <a href="#/chart" data-hover="Chart">Chart</a>
+			<a href="#/junk" data-hover="404 Page">404 Page</a>
+		
+			</nav>
+</section>
+
+
+
+<div class="cl">
+	
+  <h3 class="mytitle">a Peek at Your Day</h3>
+
+<p class="searchbar mytitle">
+      <input ng-model="searchFor" placeholder="search">
+    </p>
+
+
+
+  <div class="panel panel-default">
+
+      
+        <div style="float:left;">{{today}}</div>
+  <!--
+   <div style="float:left;">Today is :{{$rootScope.today}}</div>
+
+-->
+  <br>
+  
+
+<form  name= "mytestform" novalidate>
+  
+
+    <ul ng-repeat="name in categories | filter: searchFor" style="font-size: 16px; margin-bottom: -10px; margin-right: 20px;">
+
+   
+
+      <li ><br> {{name.goal}} -- {{name.hours}} &nbsphours --
+        {{name.rating}}
+        <br>{{name.comments}}<br>
+        <img src="img/transparent_japanese_crest_gray1.png" style="width=20px;height:20px;">
+        <hr>
+
+
+
+    </li>
+    </ul>
+    <br>
+  </form>
+
+<br>
+
+
+</div><!-- end of main cl-->
+</div><!-- end of container1-->
+
+
+
+
+

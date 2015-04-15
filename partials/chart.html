@@ -2,11 +2,15 @@
 
 <!--
 <div class="mychart" style="width:{{width}}px; height:{{height}}px;">
+	<div class="clippedImg1"></div>
+<div class="clippedImg2"></div>
+
 
 -->
 
-<div class="clippedImg1"></div>
-<div class="clippedImg2"></div>
+<div class="clippedImg3"></div>
+
+
 <div class="container1">
 
 <section class="color-11 mytitle">
@@ -15,13 +19,27 @@
 
 
 			<a href="#/" data-hover="Home">Home</a>
-			<a href="#/show" data-hover="Activities">Activities</a>
+	      	<a href="#/show" data-hover="Edit">Edit</a>
+	      	<a href="#/chart" data-hover="Chart">Chart</a>
+			<a href="#/view" data-hover="View">View</a>
 			<a href="#/junk" data-hover="404 Page">404 Page</a>
 		
+
+			
 				</nav>
 </section>
 
 
+<section style="
+border-left: 1px solid #666;
+margin-left: 60px;
+margin-right: 60px;
+margin-top: 40px;
+padding-bottom: 90px;
+border-right: 1px solid #666;
+	border-top: 1px solid #666;
+	border-bottom: 1px solid #666;
+">
 
 <br><br><br><br>
 
@@ -70,26 +88,22 @@ style="
 		position: absolute;
 		bottom: 0;"
 
+		ng-style="findColor()">
 
-
-
-	ng-style="findColor()">
-
-
-		
-
-	<p class="mylabels"
-style="position: absolute;
+		<p class="mylabels"
+			style="position: absolute;
 			font-size: 10px;
 			color: #3e6c7c;
 			bottom: -40px;"
 
-		>{{name.goal}}</p>
+			>{{name.goal}}</p>
 
 	</div>
 
 </div>
 
+
+</section>
 </div><!--end of container1-->
 <!--
 this is the code that works

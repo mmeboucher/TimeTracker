@@ -6,11 +6,10 @@
 .clearfix:before, .clearfix:after { content: ''; display: table; }
 .clearfix:after { clear: both; }
 
-.panel-primary, .panel-default { width:70%; 
+.panel-primary, .panel-default { width:80%; 
 	float:left; 
-/*	margin-right:5%; */
+/*	padding-right:5%; */
 	margin-left:5% ;
-	min-height:180px;
 	background: #d8d0ba;
 	background: #f7dca4;
 	background: #e3d9b0;
@@ -21,11 +20,25 @@
 	background: #8cb1ce; /* slate */
 	background: #99b9d4; /* slate */
 	background: #a5c2d9; /* slate */
+/*	
+height: 600px;
+overflow: auto;
+width:700px;
+
+*/
+
+
+
+min-height:180px;
 
 font-size: 1em;
 	border: 5px solid #7e8eaf;
 }
 .cl { clear:both; }
+
+li {
+	list-style-type: none;
+}
 
 .alert .alert-danger {
 
@@ -72,23 +85,23 @@ body {
     position:absolute; 
     text-align:center;
     top:0;  
+
     width:100%; 
 }
 
 
 .page-home      { 
 
-    background:#00bba9; 
-        background:#4fd1cb; 
-        background:#47bcb7; 
-    background:#51aba8; 
-        background:#00D0BC; 
-
-
+ /*
+   
+  background-image: -webkit-linear-gradient(top, #023e54, #10aac0);
+  min-height: 100%;
+  height: auto; 
+background: linear-gradient(to right, #28908c 0%,#38cab9 36%,#2dbdaf 81%,#35cbcd 100%,#86e0d4 100%);  */
+ background: linear-gradient(to right, #258693 0%,#34c9ce 36%,#29b9c1 81%,#31b6d1 100%,#84e0e2 100%);   
 
     color:#333;
     font-family: "Raleway","Helvetica Neue",  Arial, sans-serif;
-
     font-size: 30px;
     bottom:0; 
     padding-top:10px;
@@ -99,12 +112,12 @@ body {
 
 }
 .homeimg {
-  /*  width: 700px; 
-    width: 100%;
-    height: 80%; */  
+  /*  width: 700px;  */
+
+background: linear-gradient(to right, #258693 0%,#34c9ce 36%,#29b9c1 81%,#31b6d1 100%,#84e0e2 100%); 
+
     width: 100%;
     height: 80%;
-    background-color: #00d0bc;
 }
 
 .mylinks {
@@ -113,9 +126,10 @@ body {
 
 }
 
+
 .clippedImg {
   background-image: url("../img/rabbit_clock_small3.jpg");
-  opacity: .95;
+  opacity: .80;
   /*background-position: -700px -75px;*/
   /*background-position: 50px -200px;*/
     /*background-position: 750px -75px;*/
@@ -123,25 +137,55 @@ body {
   height: 150px;
   width: 100%; 
 }
+.clippedImg3 {
+  background-image: url("../img/panoramic_beach1.png");
+  background-image: url("../img/panoramic_clouds_small.jpg");
+  opacity: .80;
+  height: 100px;
+  width: 100%;
+}
+
+.clippedImg4 {
+  background-image: url("../img/panoramic_clouds.png");
+  opacity: .80;
+    height: 150px;
+  width: 100%; 
+}
 .clippedImg1 {
 	background-image: url("../img/orange_browns_small.jpg");
-  	opacity: .95;
+  	opacity: .80;
    	height: 15px;
   	width: 100%;  
 }
 .clippedImg2 {
 	background-image: url("../img/bluesandgreens_small.jpg"); 
-	opacity: .95;
+	opacity: .80;
    	height: 15px;
   	width: 100%;  
 }
 
 .image1 {
+	/*
 	width: 200px;
-	height: 200px;
+	height: 200px; 
+	*/
+	width: 60%;
+	height: 50%;
 }
 
-.page-404   { background:#ffa6bb; color:#9e0000;
+
+.page404 {
+	background-color: #e1eef3;
+	padding-bottom: 40px;
+	border: solid 4px #93a4aa;
+}
+
+.page-404   { 
+
+	background:#ffa6bb; 
+	background:#ffb7c8; 
+
+	color:#9e0000;
 font-family: "Raleway", "Helvetica Neue", Helvetica, Arial;
 
     font-size: 30px;
@@ -287,7 +331,7 @@ font-family: "Raleway", "Helvetica Neue", Helvetica, Arial;
 /*	margin-left: 15%;*/
 	background: #d4d3d1;
 	width: 100%;
-	min-height:700px;
+	min-height:2200px;
 
 	padding-left:50px;
 	padding-top: 20px; 
@@ -307,6 +351,7 @@ font-family: "Raleway", "Helvetica Neue", Helvetica, Arial;
 .mytitle {
 	margin-left: 5%;
 	font-size: .8em;
+	font-style: bold;
 }
 .mytitle-home {
 	margin-top: -8px;
@@ -362,6 +407,7 @@ font-family: "Raleway", "Helvetica Neue", Helvetica, Arial;
 
 .bgcolor-6 {  color: #fff;
 	background-color: #d1e1ab; /* liter green */
+
 }
 
 /*
@@ -379,11 +425,7 @@ textarea {
 .date {
 	float:left;
 }
-.page404 {
-	background-color: #e1eef3;
-	padding-bottom: 40px;
-	border: solid 4px #93a4aa;
-}
+
 button {
 	margin: 0 0 12px 12px;
 			background: transparent;
@@ -421,6 +463,7 @@ button:hover,  #addButton:hover {
 .inputForm {
 	border: none;
 	margin-bottom: 0;
+	/*padding-right: 5%;*/
 }
 
 
@@ -443,6 +486,7 @@ button:hover,  #addButton:hover {
 	/* new */
 	/*	overflow: hidden;  */
 	height: 70px;
+	/*padding-right: 50px;*/
 
 }
 
@@ -454,8 +498,11 @@ button:hover,  #addButton:hover {
 		display: block;
 		float: left;
 		width: 100%; /* width of input field itself */
-		font-size: .60em;   /*just changed from .70 to .60/
+
+		font-size: .50em;   /*just changed from .70 to .60 and to.50/
+
 	/*	padding: 1.7em 1em 1em 1em;  just changed */
+
 		padding: 1.7em 1em 1em .8em;
 		background: transparent;
 
@@ -486,8 +533,14 @@ button:hover,  #addButton:hover {
 .input_label {
 	display: inline-block;
 	float: right;
+
 	padding-bottom: .5em; 
-	padding-top: .5em; 
+
+/*	padding-top: .5em; just changed 4-15 */
+	padding-top: .7em; 
+
+
+
 	padding-left: 1em;
 	width: 100%;
 
@@ -587,8 +640,10 @@ button:hover,  #addButton:hover {
 	color: #4176a0;
 	color: #4883b2;
 	font-size: 1.3em;
-		margin-right: 45px;
-
+/*	font-style: bolder;
+	font-weight: 900;
+	*/
+	margin-right: 45px;
 	text-shadow: 0 0 1px rgba(111,134,134,0.3);
 }
 
@@ -632,3 +687,62 @@ button:hover,  #addButton:hover {
 
 
 
+/* Media Queries
+================================ */
+/*
+
+@media (min-width: 1px) and (max-width: 768px) {
+	.main-nav li {
+		margin-top: 15px;
+	}
+	.main-nav li:first-child {
+		margin-top: 0;
+	}
+}
+
+
+
+@media (min-width: 769px) {
+
+/*
+	body {
+		padding-top: 120px;
+	}
+*/
+
+	/* Header and Banner Layout
+	================================ 
+
+	.main-header {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 120px;
+	}
+	.main-nav {
+		display: -webkit-flex;
+		display: flex;
+		height: 100%;
+	}
+	.main-nav li {
+		-webkit-align-self: center;
+		align-self: center;
+		-webkit-flex-grow: 1;
+		flex-grow: 1;
+		margin-left: 8px;
+		margin-right: 8px;
+	}
+	.main-logo:first-child {
+		margin-right: 50px;
+		-webkit-flex-grow: 1.5;
+		flex-grow: 1.5;
+	}
+	.main-banner {
+		background: #dfe2e4;
+		/*text-align: center;  
+		padding: 50px 15px;
+		display: block;
+	/*	margin-left: 50px; no 
+	}
+}
+*/
