@@ -733,7 +733,7 @@ do {
     }]);//end of ShowController new syntax
 
 //looks like this is not necessary??
-//timeTrackerApp.controller("ShowController", ShowController);
+timeTrackerApp.controller("ShowController", ShowController);
 
 
 

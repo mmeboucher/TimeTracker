@@ -7,14 +7,6 @@ timeTrackerControllers.controller('MainCtrl', ['$scope',
         $scope.message = "Where Does the Time Go?";
     }]);
 
-/*
-timeTrackerControllers.controller('ShowController', ['$scope',
-    function ShowController($scope) {
-    	$scope.pageClass = "page-main";
-        $scope.message = "You are on Main Page";
-    }]);
-
-*/
 
 timeTrackerControllers.controller('FourCtrl', ['$scope',
     function FourCtrl($scope) {
