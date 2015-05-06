@@ -1,5 +1,6 @@
 
 //var timeTrackerControllers = angular.module('timeTrackerControllers', []);
+//timeTrackerApp.controller("ShowController", ShowController);
 
 
 timeTrackerControllers.controller('ShowController', ['$scope',
@@ -7,6 +8,9 @@ timeTrackerControllers.controller('ShowController', ['$scope',
     function ShowController($scope, $rootScope) {
     	$scope.pageClass = "page-main";
         $scope.message = "You are on Main Page";
+
+
+
 
 
         $rootScope.msg = "rootScope msg now changed";
@@ -732,8 +736,9 @@ do {
 
     }]);//end of ShowController new syntax
 
+
+
 //looks like this is not necessary??
-timeTrackerApp.controller("ShowController", ShowController);
 
 
 
