@@ -8,11 +8,11 @@ timeTrackerControllers.controller('MainCtrl', ['$scope',
     }]);
 
 
-timeTrackerControllers.controller('FourCtrl', ['$scope',
-    function FourCtrl($scope) {
-    	$scope.pageClass = "page-404";
-        $scope.message = "You ran into a 404 !";
-    }]);
+// timeTrackerControllers.controller('FourCtrl', ['$scope',
+//     function FourCtrl($scope) {
+//     	$scope.pageClass = "page-404";
+//         $scope.message = "You ran into a 404 !";
+//     }]);
 
 
 
