@@ -1,5 +1,5 @@
 
-//var timeTrackerControllers = angular.module('timeTrackerControllers', []);
+var timeTrackerControllers = angular.module('timeTrackerControllers', []);
 
 timeTrackerControllers.controller('MainCtrl', ['$scope',
     function MainCtrl($scope) {
